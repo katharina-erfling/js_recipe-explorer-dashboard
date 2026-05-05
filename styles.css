@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4d7c0f;
+}
+
+#search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #65a30d;
+  border-radius: 5px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4d7c0f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#search-button:hover {
+  background-color: #65a30d;
+  transition: 0.1s;
+}
+
+#recipes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+#recipes-table th,
+#recipes-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#recipes-table th {
+  background-color: #4d7c0f;
+  color: white;
+}
+
+#recipes-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#recipes-table tr:hover {
+  background-color: #ecfccb;
+  cursor: pointer;
+}
+
+/* Statistics Section */
+#stats-container {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-card .stat-label {
+  font-size: 13px;
+  color: #4d7c0f;
+  margin-bottom: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-card .stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a2e05;
+}
+
+.stat-card .stat-sub {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* Cuisine chart */
+#cuisine-chart {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+#cuisine-chart h2 {
+  color: #4d7c0f;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.cuisine-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+.cuisine-row .c-name {
+  width: 130px;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+
+.cuisine-row .c-bar-wrap {
+  flex: 1;
+  height: 10px;
+  background: #dcfce7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cuisine-row .c-bar {
+  height: 100%;
+  background: #4d7c0f;
+  border-radius: 5px;
+}
+
+.cuisine-row .c-count {
+  width: 30px;
+  text-align: right;
+  color: #6b7280;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Loading Indicator */
+#loading {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #4d7c0f;
+}
+
+/* Error Message */
+#error-message {
+  display: none;
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recipe Explorer Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Recipe Explorer Dashboard</h1>
+
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Search for recipes by name..." />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div id="loading">Loading...</div>
+    <div id="error-message"></div>
+
+    <div id="stats-container">
+      <div class="stat-card">
+        <div class="stat-label">Total Recipes</div>
+        <div class="stat-value" id="stat-total">—</div>
+        <div class="stat-sub">fetched from API</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Avg. Preparation Time</div>
+        <div class="stat-value" id="stat-avg">—</div>
+        <div class="stat-sub">prep + cook (mins)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Cuisines</div>
+        <div class="stat-value" id="stat-cuisines">—</div>
+        <div class="stat-sub">unique cuisines</div>
+      </div>
+    </div>
+
+    <div id="cuisine-chart">
+      <h2>Recipes by Cuisine</h2>
+      <div id="cuisine-bars"></div>
+    </div>
+
+    <table id="recipes-table">
+      <thead>
+        <tr>
+          <th>Recipe Name</th>
+          <th>Cuisine</th>
+          <th>Preparation Time (mins)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Recipe Name</h2>
+        <img id="modal-image" src="" alt="Recipe Image" style="border-radius: 10px; max-height: 200px" />
+        <p><strong>Cuisine:</strong> <span id="modal-category"></span></p>
+        <p><strong>Preparation Time:</strong> <span id="modal-time"></span> mins</p>
+        <p><strong>Ingredients:</strong></p>
+        <ul id="modal-ingredients"></ul>
+        <p><strong>Instructions:</strong></p>
+        <p id="modal-instructions"></p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
